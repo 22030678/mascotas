@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "Mascotas_backend": {
+      "main": "src/Mascotas_backend/main.mo",
+      "type": "motoko"
+    },
+    "Mascotas_frontend": {
+      "dependencies": [
+        "Mascotas_backend"
+      ],
+      "source": [
+        "src/Mascotas_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Mascotas_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
