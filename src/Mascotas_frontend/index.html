@@ -2,15 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IC Hello Starter</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/src/tailwind.min.css">
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.js"></script>
+  <div class="container mx-mascota">
+    <div id="contenido" class="pb-10">
+      <header class="bg-teal-500 text-white py-3 font-bold uppercase w-full">
+        <h1 class="text-center">Pet Insurance</h1>
+      </header>
+      <form class="mt-10 max-w-lg mx-mascota" action="#" id="cotizar-seguro" >
+        <div class="flex items-center mb-5">
+          <label class="font-bold  uppercase mr-2 w-20" for="marca">Species:</label>
+          <select class="flex-1 bg-gray-100 p-3 appearance-none" id="marca">
+            <option value="">- Seleccionar -</option>
+            <option value="1">Dog</option>
+            <option value="2">Cat</option>
+            <option value="3">Rabbit</option>
+            <option value="4">Hamster</option>
+            <option value="5">Parrot</option>
+          </select>
+        </div>
+        <div class="flex items-center mb-5">
+          <label class="font-bold  uppercase mr-2 w-20" for="age">Pet's year of birth:     </label>
+          <select class="flex-1 bg-gray-100 p-3 appearance-none" id="age"></select>
+        </div>
+        <fieldset>
+          <legend class="font-bold  uppercase text-2xl text-center w-full">Type of Insurance</legend>
+
+          <div class="flex justify-around mt-5">
+            <div>
+              <label class="font-bold  uppercase mr-2">Basic</label>
+              <input type="radio" name="tipo" value="basico" checked>
+              </label>
+            </div>
+            <div>
+              <label class="font-bold  uppercase mr-2">Full</label>
+              <input type="radio" name="tipo" value="completo">
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div id="cargando" class="hidden">
+          <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+        </div>
+        <div id="resultado"></div>
+        <div class="flex  justify-center py-4">
+          <button type="submit"
+            class="mx-mascota bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-20 rounded">Quote Insurance
+          </button>
+        </div>
+
+      </form>
+    </div> <!--#contenido-->
+  </div>
+
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
